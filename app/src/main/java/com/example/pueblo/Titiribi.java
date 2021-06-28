@@ -4,10 +4,10 @@ import java.io.Serializable;
 
 public class Titiribi implements Serializable {
 
-    String titulo, texto;
-    int foto;
+    String titulo, texto,foto;
 
-    public Titiribi(String titulo, String texto, int foto) {
+
+    public Titiribi(String titulo, String texto, String foto) {
         this.titulo = titulo;
         this.texto = texto;
         this.foto = foto;
@@ -29,11 +29,11 @@ public class Titiribi implements Serializable {
         this.texto = texto;
     }
 
-    public int getFoto() {
+    public String getFoto() {
         return foto;
     }
 
-    public void setFoto(int foto) {
+    public void setFoto(String foto) {
         this.foto = foto;
     }
 }

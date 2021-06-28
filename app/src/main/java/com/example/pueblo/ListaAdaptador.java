@@ -10,6 +10,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.ArrayList;
 
 public class ListaAdaptador extends RecyclerView.Adapter<ListaAdaptador.viewHolder> {
@@ -51,7 +53,9 @@ public class ListaAdaptador extends RecyclerView.Adapter<ListaAdaptador.viewHold
         }
 
         public void actualizarDatos(final Titiribi titiribi){
-            img.setImageResource(titiribi.getFoto());
+            Picasso.with(itemView.getContext())
+                    .load(titiribi.getFoto())
+                    .into(img);
             tit.setText(titiribi.getTitulo());
 
             itemView.setOnClickListener(new View.OnClickListener() {

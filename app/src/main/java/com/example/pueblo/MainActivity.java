@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.squareup.picasso.Picasso;
+
 public class MainActivity extends AppCompatActivity {
 
     Titiribi titiribi;
@@ -23,7 +25,9 @@ public class MainActivity extends AppCompatActivity {
 
         titiribi = (Titiribi) getIntent().getSerializableExtra("datos");
 
-        img.setImageResource(titiribi.getFoto());
+        Picasso.with(MainActivity.this)
+                .load(titiribi.getFoto())
+                .into(img);
         titulo.setText(titiribi.getTitulo());
         texto.setText(titiribi.getTexto());
     }

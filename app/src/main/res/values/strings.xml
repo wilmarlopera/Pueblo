@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Titiribi</string>
+    <string name="opcion1">acerca de</string>
+    <string name="opcion2">español</string>
+    <string name="opcion3">ingles</string>
+    <string name="descripcion">soy wilmar lopera tengo cualidades para el canto, composicion  seguidor del futbol.</string>
 </resources>
